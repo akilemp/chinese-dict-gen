@@ -36,9 +36,9 @@ Each entry in the JSON array has:
 - "pinyin": Pinyin of the word.
 - "definition": English definition.
 - "example": An object with:
-- - "chinese": Chinese example sentence.
-- - "pinyin": Pinyin of the sentence.
-- - "english": English translation.
+  - "chinese": Chinese example sentence.
+  - "pinyin": Pinyin of the sentence.
+  - "english": English translation.
 - "traditional": Tradional writing.
 - "simplified": Simplified writing,
 - "rank": Word frequency rank.
