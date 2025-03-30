@@ -22,14 +22,52 @@ pip install -r requirements.txt
 
 - Tatoeba: This is a collection of translated sentences from Tatoeba. Download the Chinese-English translations from OPUS, extract the text files (e.g., zh.txt and en.txt), and place them in your project data/ directory.
 
+### Installion
+
+1. Clone the repository (or download the script):
+```bash
+git clone https://github.com/akilemp/chinese-dict-gen.git
+cd your-repo
+```
+
+2. Create a virtual environment (optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Download and place datasets:
+  - Place SUBTLEX-CH-WF.xlsx, cedict_ts.u8, zh.txt, and en.txt in the project data/ directory, or update the file paths in the script if stored elsewhere.
+
+
+
 ### Usage
 
 1. Update file paths in the script.
+  - Open the script and replace the placeholder paths with the actual locations of your datasets:
+
+```python
+SUBTLEX_FILE = 'data\SUBTLEX-CH-WF.xlsx'
+CEDICT_FILE = 'data\cedict_ts.u8'
+ZH_TATOEBA = 'data\cmn.txt'
+EN_TATOEBA = 'data\EN.txt'
+DICT_SIZE = 10_000
+OUTPUT_FILE = 'mandarin_dictionary.json'
+```
 
 2. Run:
 ```bash
 python generate_dictionary.py
 ```
+
+3. Output:
+  - The script generates a JSON file (mandarin_dictionary.json) containing the dictionary entries.
+
 
 ### Output Format
 Each entry in the JSON array has:
